@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     dir: {
       js: 'js',
       css: 'css',
-      sass: 'css/sass',
+      sass: 'sass',
       img: 'img'
     },
 
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
       },
       js: {
         src: '<%= jshint.files %>',
-        dest: '<%= dir.js %>/<%= pkg.name %>.js'
+        dest: '<%= dir.js %>/main.js'
       },
     },
 
@@ -127,12 +127,12 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
-          // sourcemap: true, // Requires Sass 3.3.0 alpha: `sudo gem install sass --pre`
+          sourcemap: true, // Requires Sass 3.3.0 alpha: `sudo gem install sass --pre`
           trace: true,
           debugInfo: true
         },
         files: {
-          '<%= dir.css %>/<%= pkg.name %>.css': '<%= dir.sass %>/global.scss'
+          '<%= dir.css %>/main.css': '<%= dir.sass %>/main.scss'
         }
       },
 
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          '<%= dir.css %>/<%= pkg.name %>.css': '<%= dir.sass %>/global.scss'
+          '<%= dir.css %>/main.min.css': '<%= dir.sass %>/main.scss'
         }
       }
     },
@@ -162,7 +162,7 @@ module.exports = function(grunt) {
       // Minify js files in js/src/
       dist: {
         src: ['<%= concat.js.dest %>'],
-        dest: '<%= dir.js %>/<%= pkg.name %>.min.js'
+        dest: '<%= dir.js %>/main.min.js'
       },
     },
 

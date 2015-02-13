@@ -3,14 +3,14 @@
   "title": "A simple Grunt project",
   "description": "A basic Grunt project to get started.",
   "version": "0.1.0",
-  "homepage": "http://markgoodyear.com",
+  "homepage": "http://jonathanstegall.com",
   "author": {
-    "name": "Mark Goodyear",
-    "url": "http://markgoodyear.com"
+    "name": "Jonathan Stegall",
+    "url": "http://jonathanstegall.com"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.10.3"
+    "node": ">=0.12.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
